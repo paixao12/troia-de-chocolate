@@ -1,0 +1,26 @@
+body{
+    background-color: rgb(252, 149, 213);
+    color: black;
+    font-family: "Trocchi", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 220%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0%;
+  text-align: center;
+}
+
+button{
+  background-color: rgb(242, 235, 230);
+  color: rgb(9, 9, 9);
+  font-family: "Trocchi", serif;
+  font-size: 20px;
+  
+}
+
+img{
+  max-width: 10.10;
+  padding-top: 100px;
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@1,400..900&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receitas Doces com Chocolate</title>
+</head>
+<body>
+    <main>
+        <div class="Passo" id="Passo-0">
+            <img src="imagem0.jpeg" alt="Imagem de chocolate">
+            <p>
+                Se você é apaixonado por chocolate como eu, convido você a explorar esta página cheia de delícias e diversão. Que sua jornada seja tão doce quanto o chocolate!
+            </p>
+            <button class="btn-proximo" data-proximo="1">
+                Sim, vamos lá
+            </button>
+            <button class="btn-proximo" data-proximo="2">
+                Não gosto
+            </button>
+        </div>
+        <div class="Passo" id="Passo-1" style="display: none;">
+            <img src="imagem1.jpeg" alt="Imagem de receita">
+            <p>
+                Aqui estão algumas receitas deliciosas com chocolate!
+            </p>
+            <button class="btn-proximo" data-proximo="3">
+                Ver receitas
+            </button>
+            <button class="btn-proximo" data-proximo="0">
+                Voltar
+            </button>
+        </div>
+        <div class="Passo" id="Passo-3" style="display: none;">
+            <h2>Receitas de Chocolate</h2>
+            <ul>
+                <li>
+                    <h3>Cheesecake de Chocolate</h3>
+                    <p>Ingredientes: Cream cheese, chocolate, açúcar, biscoito...</p>
+                    <p>Modo de preparo: Misture os ingredientes, coloque em uma forma e asse.</p>
+                </li>
+                <li>
+                    <h3>Mousse de Chocolate</h3>
+                    <p>Ingredientes: Chocolate, creme de leite, açúcar, gelatina...</p>
+                    <p>Modo de preparo: Derreta o chocolate, misture com os outros ingredientes e leve à geladeira.</p>
+                </li>
+                <li>
+                    <h3>Brownie de Chocolate</h3>
+                    <p>Ingredientes: Chocolate, farinha, ovos, açúcar...</p>
+                    <p>Modo de preparo: Misture todos os ingredientes, coloque na forma e asse até ficar firme.</p>
+                </li>
+            </ul>
+            <button class="btn-proximo" data-proximo="1">
+                Voltar
+            </button>
+        </div>
+        <div class="Passo" id="Passo-4" style="display: none;">
+            <p>
+                Então siga sua vida e seja feliz em outro site!!!!
+            </p>
+        </div>
+    </main>
+    <script>
+        document.querySelectorAll('.btn-proximo').forEach(button => {
+            button.addEventListener('click', function() {
+                const nextStep = this.getAttribute('data-proximo');
+                document.querySelectorAll('.Passo').forEach(div => {
+                    div.style.display = 'none';
+                });
+                if (nextStep === '2') {
+                    document.getElementById('Passo-4').style.display = 'block';
+                } else {
+                    document.getElementById('Passo-' + nextStep).style.display = 'block';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
